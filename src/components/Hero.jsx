@@ -26,7 +26,7 @@ const Hero = () => {
         sm:bg-hero bg-hero-mobile overflow-hidden"
       >
         <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
+          className={`absolute inset-0 sm:top-[250px] top-[120px] 
           lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}
@@ -38,12 +38,12 @@ const Hero = () => {
 
           <div>
             <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
+              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase sm:text-[90px] text-[40px]`}
             >
               Hi, I'm{' '}
               <span
                 className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
+                text-eerieBlack text-[40px] font-mova
                 font-extrabold uppercase"
               >
                 Francisco
@@ -91,7 +91,7 @@ const Hero = () => {
           <img
             className="absolute bottom-0 ml-[50vw] 
             lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
+            sm:h-[90vh] md:h-[70vh] xl:h-[80vh] h-[40vh] ml-[60vw] sm:ml-[50vw]"
             src={fran}
             alt="francisco"
           />
