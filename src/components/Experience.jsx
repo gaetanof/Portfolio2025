@@ -105,7 +105,8 @@ const Experience = () => {
   ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/uc?export=download&id=1W5-D1L0gbUSPOkf1k9IstEo36655tZiw', // Enlace de descarga directa
+                  'https://drive.google.com/uc?export=download&id=1e_wanQKsAuGsKTieKZizzA96zC8X3bsy',
+                  // Enlace de descarga directa
                   '_blank'
                 )
               }

@@ -50,8 +50,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              I specialize in creating innovative digital solutions that enhance
-              online interactions.
+              I leverage logical insights to strategically transform technology
+              into high-impact SaaS solutions.
             </p>
           </div>
           <div
