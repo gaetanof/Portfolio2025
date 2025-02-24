@@ -44,31 +44,20 @@ import graphql from './tech/graphql.png';
 import postgresql from './tech/postgresql.png';
 import rubyrails from './tech/rubyrails.png';
 
-import coverhunt from './company/coverhunt.png';
-import dcc from './company/dcc.png';
-import kelhel from './company/kelhel.png';
-import microverse from './company/microverse.png';
+
+//company
 
 import dtt from './company/dtt.png';
 import icbc from './company/icbc.png';
 import sup from './company/sup.png';
 import gaetano from './company/gaetano.png';
 
+//projects
 
 import cherrypickers from './projects/cherrypickers.png';
 import articgin from './projects/articgin.png';
 import itsanet from './projects/itsanet.png';
 import gericht from './projects/gericht.png';
-
-
-
-
-import komikult from './projects/komikult.png';
-import leaderboard from './projects/leaderboard.png';
-import math from './projects/math-magicians.png';
-import movie from './projects/movie-metro.png';
-import nyeusi from './projects/nyeusi.png';
-import space from './projects/space-hub.png';
 
 export {
   bwmap,
@@ -119,15 +108,5 @@ export {
   icbc,
   dtt,
   sup,
-  gaetano,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  space,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
+  gaetano
 };

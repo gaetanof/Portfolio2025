@@ -23,16 +23,7 @@ import {
   icbc,
   dtt,
   sup,
-  gaetano,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
+  gaetano
 } from '../assets';
 
 export const navLinks = [
@@ -52,19 +43,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Web Development',
+    title: { en: 'Web Development', es: 'Desarrollo Web' },
     icon: webdevelopment,
   },
   {
-    title: 'Automations',
+    title: { en: 'Automations', es: 'Automatizaciones' },
     icon: automations,
   },
   {
-    title: 'User Management',
+    title: { en: 'User Management', es: 'Gestión de Usuarios' },
     icon: users,
   },
   {
-    title: 'API Creation & Integrations',
+    title: { en: 'API Creation & Integrations', es: 'Creación de API e Integraciones' },
     icon: prototyping,
   },
 ];
@@ -126,32 +117,68 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Greeter',
-    company_name: 'ICBC bank',
+    title: {
+      en: 'Greeter',
+      es: 'Greeter'
+    },
+    company_name: {
+      en: 'ICBC bank',
+      es: 'Banco ICBC'
+    },
     icon: icbc,
     iconBg: '#333333',
-    date: 'Feb 2019 - Oct 2019',
+    date: {
+      en: 'Feb 2019 - Oct 2019',
+      es: 'Feb 2019 - Oct 2019'
+    },
   },
   {
-    title: 'Automation Consultant',
-    company_name: 'Deloitte',
+    title: {
+      en: 'Data Analyst',
+      es: 'Analista de Datos'
+    },
+    company_name: {
+      en: 'Deloitte',
+      es: 'Deloitte'
+    },
     icon: dtt,
     iconBg: '#333333',
-    date: 'Apr 2022 - Apr 2024',
+    date: {
+      en: 'Apr 2022 - Apr 2024',
+      es: 'Abr 2022 - Abr 2024'
+    },
   },
   {
-    title: 'User Management Consultant',
-    company_name: 'SUP',
+    title: {
+      en: 'Product Expert',
+      es: 'Product Expert'
+    },
+    company_name: {
+      en: 'SUP',
+      es: 'SUP'
+    },
     icon: sup,
     iconBg: '#333333',
-    date: 'Apr 2024 - Present',
+    date: {
+      en: 'Apr 2024 - Present',
+      es: 'Abr 2024 - Presente'
+    },
   },
   {
-    title: 'Web Developer',
-    company_name: 'Freelance',
+    title: {
+      en: 'Web Developer',
+      es: 'Desarrollador Web'
+    },
+    company_name: {
+      en: 'Freelance',
+      es: 'Freelance'
+    },
     icon: gaetano,
     iconBg: '#333333',
-    date: 'Dic 2023 - Present',
+    date: {
+      en: 'Dec 2023 - Present',
+      es: 'Dic 2023 - Presente'
+    },
   },
 ];
 
@@ -159,14 +186,17 @@ const projects = [
   {
     id: 'project-1',
     name: 'Itsanet',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    description: {
+      en: "Website for international logistics company.",
+      es: "Sitio para empresa de logística internacional."
+    },
     tags: [
       {
-        name: 'nextjs',
+        name: 'wordpress',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'divi',
         color: 'green-text-gradient',
       },
       {
@@ -180,8 +210,10 @@ const projects = [
   {
     id: 'project-2',
     name: 'Artic',
-    description:
-      'Site for a local business that sells handcrafted dry gin.',
+    description: {
+      en: "Site for a local business that sells handcrafted dry gin.",
+      es: "Sitio para un negocio local que vende gin artesanal."
+    },
     tags: [
       {
         name: 'react',
@@ -200,11 +232,13 @@ const projects = [
     repo: 'https://github.com/gaetanof/articGin',
     demo: 'https://www.artictv.com/',
   },
-
   {
     id: 'project-3',
     name: 'CherryPickers',
-    description: 'A real estate company website aimed at attracting clients. Its primary goal is to receive a form with a brief description of properties.',
+    description: {
+      en: "A real estate company website aimed at attracting clients. Its primary goal is to receive a form with a brief description of properties.",
+      es: "Sitio web para una empresa inmobiliaria orientada a atraer clientes. Su objetivo principal es recibir un formulario con una breve descripción de propiedades."
+    },
     tags: [
       {
         name: 'react',
@@ -226,8 +260,10 @@ const projects = [
   {
     id: 'project-5',
     name: 'Gericht Resto',
-    description:
-      'Website mockup for a restaurant as a practice project.',
+    description: {
+      en: "Website mockup for a restaurant as a practice project.",
+      es: "Maqueta de sitio web para un restaurante como proyecto de práctica."
+    },
     tags: [
       {
         name: 'react',
@@ -247,5 +283,6 @@ const projects = [
     demo: 'https://www.gerichtrestaurant.site/',
   },
 ];
+
 
 export { services, technologies, experiences, projects };

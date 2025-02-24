@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
+import { LanguageContext } from '../context/LanguageContext';
+import { strings } from '../constants/strings';
 
 const ProjectCard = ({
   id,
@@ -17,6 +19,9 @@ const ProjectCard = ({
   active,
   handleClick,
 }) => {
+  // Se obtiene el idioma actual desde el contexto
+  const { language } = useContext(LanguageContext);
+
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -80,7 +85,7 @@ const ProjectCard = ({
               max-w-3xl sm:leading-[24px] leading-[18px]
               font-poppins tracking-[1px]"
             >
-              {description}
+              {description[language]}
             </p>
             <button
               className="live-demo flex justify-between 
@@ -120,12 +125,17 @@ const ProjectCard = ({
 
 const Projects = () => {
   const [active, setActive] = useState('project-2');
+  const { language } = useContext(LanguageContext);
 
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText}`}>
+          {strings.projects.caseStudies[language]}
+        </p>
+        <h2 className={`${styles.sectionHeadTextLight}`}>
+          {strings.projects.projectsTitle[language]}
+        </h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -133,10 +143,7 @@ const Projects = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
-          These are some of the projects that highlight my expertise and skills.
-          In each case, I had to adapt to the unique context and requirements of
-          different clients, providing customized solutions that enhanced
-          business performance at every level.
+          {strings.projects.description[language]}
         </motion.p>
       </div>
 
