@@ -1,7 +1,7 @@
 // constants/strings.js
 export const strings = {
   navbar: {
-    about: { en: "About", es: "Sobre mí" },
+    about: { en: "About", es: "Sobre mi" },
     projects: { en: "Projects", es: "Proyectos" },
     contact: { en: "Contact", es: "Contacto" }
   },

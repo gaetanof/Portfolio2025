@@ -12,7 +12,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [borderAnimation, setBorderAnimation] = useState(false);
 
-  // Disparamos una animación de 1 segundo al cambiar el idioma
+  // Animación 1s al cambiar idioma
   const handleLanguageToggle = () => {
     toggleLanguage();
     setBorderAnimation(true);
@@ -21,21 +21,16 @@ const Navbar = () => {
     }, 1000);
   };
 
-  // Si se está animando por cambio de idioma,
-  // el botón recibe la clase de animación .animate-flashES o .animate-flashEN
   const animationClass = borderAnimation
     ? language === 'en'
       ? 'animate-flashES'
       : 'animate-flashEN'
     : '';
 
-  // Para el hover, aplicamos una clase distinta (.hover-flashES o .hover-flashEN)
-  // según el idioma actual. Así, al pasar el mouse también se verá la animación.
   const hoverClass = language === 'en' ? 'hover-flashES' : 'hover-flashEN';
 
   return (
     <nav className="fixed top-8 left-0 w-full z-20">
-      {/* Contenedor centrado al 85% del ancho */}
       <div
         className={`mx-auto w-[85%] bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh] py-2 px-4
         border border-black rounded-xl shadow-3xl flex items-center justify-between`}
@@ -75,7 +70,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Botón de cambio de idioma (Desktop) */}
+        {/* Botón de idioma Desktop */}
         <div className="hidden sm:flex">
           <button
             onClick={handleLanguageToggle}
@@ -89,7 +84,7 @@ const Navbar = () => {
 
         {/* Menú Mobile */}
         <div className="sm:hidden flex justify-end items-center">
-          {/* Botón de cambio de idioma (Mobile) */}
+          {/* Botón de idioma Mobile */}
           <button
             onClick={handleLanguageToggle}
             className={`mr-2 w-[48px] h-[48px] border border-black text-black 
@@ -111,14 +106,16 @@ const Navbar = () => {
                   onClick={() => setToggle(!toggle)}
                 />
               </div>
-              <ul className="list-none flex flex-col gap-4 items-start justify-end mt-[10rem] -ml-[35px]">
+
+              {/* UL con clase "mobile-ul" */}
+              <ul className="mobile-ul list-none flex flex-col gap-4 items-start justify-end mt-[10rem] -ml-[9px]">
                 {navLinks.map((nav) => (
                   <li
                     id={nav.id}
                     key={nav.id}
-                    className={`${
+                    className={`mobile-menu-item ${
                       active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq uppercase tracking-[1px] cursor-pointer`}
+                    } font-bold font-arenq uppercase tracking-[1px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);
@@ -144,7 +141,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Estilos y animaciones de un solo uso */}
       <style>{`
         @keyframes flashES {
           0% {
@@ -175,14 +171,13 @@ const Navbar = () => {
           }
         }
 
-        /* Clases para la animación en hover */
+        /* Hover animations */
         .hover-flashES:hover {
           animation: flashES 1s forwards;
         }
         .hover-flashEN:hover {
           animation: flashEN 1s forwards;
         }
-
         .animate-flashES {
           animation: flashES 1s forwards;
         }
@@ -192,6 +187,21 @@ const Navbar = () => {
 
         .shadow-3xl {
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* === Ajustes EXCLUSIVOS para MOBILE (max-width: 640px) === */
+        @media (max-width: 640px) {
+          /* Ajustar el UL del menú móvil */
+          .mobile-ul {
+            margin-top: 6rem !important; 
+            margin-left: 0 !important;   
+            gap: 2rem !important;        
+          }
+          /* Ajustar la fuente de cada elemento */
+          .mobile-ul .mobile-menu-item {
+            font-size: 36px !important;   
+            line-height: 1.2 !important;
+          }
         }
       `}</style>
     </nav>
