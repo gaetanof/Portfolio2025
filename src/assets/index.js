@@ -48,16 +48,14 @@ import rubyrails from './tech/rubyrails.png';
 //company
 
 import dtt from './company/dtt.png';
-import icbc from './company/icbc.png';
 import sup from './company/sup.png';
 import gaetano from './company/gaetano.png';
 
 //projects
 
-import cherrypickers from './projects/cherrypickers.png';
 import articgin from './projects/articgin.png';
 import itsanet from './projects/itsanet.png';
-import gericht from './projects/gericht.png';
+import medicina from './projects/medicinareumatologica.jpg';
 
 export {
   bwmap,
@@ -101,11 +99,9 @@ export {
   redux,
   tailwind,
   typescript,
-  cherrypickers,
   articgin,
   itsanet,
-  gericht,
-  icbc,
+  medicina,
   dtt,
   sup,
   gaetano

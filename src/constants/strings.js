@@ -17,8 +17,8 @@ export const strings = {
       }
     },
     description: {
-      en: "I leverage logical insights to strategically transform technology into high-impact SaaS solutions.",
-      es: "Convierto la tecnología en soluciones digitales innovadoras que realmente marcan la diferencia."
+      en: "From landing pages to complex logins, I build for the web and specialize in identity, access, and the infrastructure behind it.",
+      es: "Desde una landing hasta logins complejos: hago desarrollo web y me especializo en identidad, control de accesos y la infraestructura detrás."
     },
     altWorldMap: {
       en: "world map",
@@ -40,7 +40,7 @@ export const strings = {
     },
     description: {
       en: "Welcome to my portfolio! This is a space where I showcase my skills, projects, and experiences. I’m passionate about building innovative digital solutions that solve real-world problems. Feel free to explore my work and connect with me if you’re interested in collaborating.",
-      es: "¡Bienvenido a mi portfolio! Este es un espacio donde muestro mis habilidades, proyectos y experiencias. Me apasiona construir soluciones digitales innovadoras que resuelvan problemas reales. No dudes en explorar mi trabajo y en contactarme si querés que trabajemos juntos."
+      es: "Bienvenido a mi portfolio! Este es un espacio donde muestro mis habilidades, proyectos y experiencias. Me apasiona construir soluciones digitales innovadoras que resuelvan problemas reales. No dudes en explorar mi trabajo y en contactarme si querés que trabajemos juntos."
     }
   },
   tech: {
@@ -63,18 +63,18 @@ export const strings = {
       es: "Proyectos."
     },
     description: {
-      en: "These are some of the projects that highlight my expertise and skills. In each case, I had to adapt to the unique context and requirements of different clients, providing customized solutions that enhanced business performance at every level.",
-      es: "Estos son algunos de los proyectos que destacan mi experiencia y habilidades. En cada caso, tuve que adaptarme al contexto y requerimientos únicos de cada cliente, ofreciendo soluciones personalizadas que mejoraron el rendimiento del negocio en todos los niveles."
+      en: "A few projects I'm happy to put my name on. Different businesses, different problems, each one built to fit its context and actually move things forward.",
+      es: "Algunos proyectos que firmo con gusto. Distintos negocios, distintos desafíos, cada uno resuelto a medida de su contexto y para dar resultados concretos."
     }
   },
   experience: {
     subText: {
-      en: "My journey",
-      es: "Mi recorrido"
+      en: "The road so far",
+      es: "El camino hasta acá"
     },
     headText: {
-      en: "Work Experience.",
-      es: "Experiencia Laboral."
+      en: "Experience.",
+      es: "Experiencia."
     },
     resumeBtn: {
       en: "MY RESUME",
@@ -87,8 +87,8 @@ export const strings = {
   },
   contact: {
     sectionSubText: {
-      en: "Get in touch",
-      es: "Ponte en contacto"
+      en: "Let's talk",
+      es: "Hablemos"
     },
     sectionHeadText: {
       en: "Contact.",
@@ -127,8 +127,8 @@ export const strings = {
       es: "Enviando"
     },
     successMessage: {
-      en: "Thank you for reaching out! I will review your inquiry shortly.",
-      es: "¡Gracias por contactarme! Revisaré tu consulta en breve."
+      en: "Thanks for reaching out. I'll get back to you soon.",
+      es: "Gracias por escribir. Te respondo a la brevedad."
     },
     mandatoryPlaceholder: {
       en: "Required field",
@@ -137,6 +137,10 @@ export const strings = {
     emptyFieldsError: {
       en: "Please fill in all required fields",
       es: "Por favor completa todos los campos"
+    },
+    sendError: {
+      en: "Something went wrong. Please try again or write me directly at franciscogaetano1@gmail.com.",
+      es: "Algo salió mal. Probá de nuevo o escribime directo a franciscogaetano1@gmail.com."
     }
   }
 };

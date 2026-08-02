@@ -1,12 +1,15 @@
 import React, { useState, useRef, useContext } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { send, sendHover } from '../assets';
 import { LanguageContext } from '../context/LanguageContext';
 import { strings } from '../constants/strings';
+
+// Web3Forms Access Key (es pública y segura de exponer en el frontend).
+// Conseguí la tuya en https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = 'd85579ee-1753-4f58-94c1-0adcc97e05dd';
 
 const Contact = () => {
   const formRef = useRef();
@@ -58,24 +61,38 @@ const Contact = () => {
     }
 
     setFormError(''); // Limpiamos mensaje de error si todo está correcto
+
+    // Honeypot anti-spam: si este campo oculto está tildado, es un bot.
+    // Simulamos éxito y no enviamos nada.
+    if (formRef.current?.botcheck?.checked) {
+      setSuccessMessage(true);
+      setForm({ name: '', email: '', message: '' });
+      setTimeout(() => setSuccessMessage(false), 5000);
+      return;
+    }
+
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: 'Fran',
-          from_email: form.email,
-          to_email: 'franciscogaetano1@gmail.com',
-          message: form.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
+    // Envío mediante Web3Forms (https://web3forms.com)
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: `Nuevo mensaje de ${form.name} desde tu portfolio`,
+        from_name: 'Portfolio franciscogaetano.com',
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        if (data.success) {
           setSuccessMessage(true);
           // Limpiar campos y errores
           setForm({
@@ -92,13 +109,16 @@ const Contact = () => {
           formRef.current?.reset();
           // Oculta el mensaje de éxito después de unos segundos
           setTimeout(() => setSuccessMessage(false), 5000);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          alert('Something went wrong. Please try again.');
+        } else {
+          console.error('Web3Forms error:', data);
+          setFormError(strings.contact.sendError[language]);
         }
-      );
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
+        setFormError(strings.contact.sendError[language]);
+      });
   };
 
   return (
@@ -119,6 +139,16 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="mt-10 flex flex-col gap-6 font-poppins"
         >
+          {/* Honeypot anti-spam (invisible para humanos) */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: 'none' }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
           {/* NOMBRE */}
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">

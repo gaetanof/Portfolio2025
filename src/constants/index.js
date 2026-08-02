@@ -16,11 +16,9 @@ import {
   postman,
   vercel,
   openai,
-  cherrypickers,
   articgin,
   itsanet,
-  gericht,
-  icbc,
+  medicina,
   dtt,
   sup,
   gaetano
@@ -118,22 +116,6 @@ const technologies = [
 const experiences = [
   {
     title: {
-      en: 'Greeter',
-      es: 'Greeter'
-    },
-    company_name: {
-      en: 'ICBC bank',
-      es: 'Banco ICBC'
-    },
-    icon: icbc,
-    iconBg: '#333333',
-    date: {
-      en: 'Feb 2019 - Oct 2019',
-      es: 'Feb 2019 - Oct 2019'
-    },
-  },
-  {
-    title: {
       en: 'Data Analyst',
       es: 'Analista de Datos'
     },
@@ -187,8 +169,8 @@ const projects = [
     id: 'project-1',
     name: 'Itsanet',
     description: {
-      en: "Website for international logistics company.",
-      es: "Sitio para empresa de logística internacional."
+      en: "Corporate site for an international logistics company, built to look as global as they operate.",
+      es: "Sitio corporativo para una empresa de logística internacional, pensado para verse tan global como opera."
     },
     tags: [
       {
@@ -205,14 +187,14 @@ const projects = [
       },
     ],
     image: itsanet,
-    demo: 'https://staging-51b3-contactos5d2219e63c.wpcomstaging.com/',
+    demo: 'https://itsanet.com/',
   },
   {
     id: 'project-2',
     name: 'Artic',
     description: {
-      en: "Site for a local business that sells handcrafted dry gin.",
-      es: "Sitio para un negocio local que vende gin artesanal."
+      en: "Brand site for a handcrafted dry gin. Small local label, bold online presence.",
+      es: "Sitio de marca para un gin artesanal. Etiqueta local, presencia online con carácter."
     },
     tags: [
       {
@@ -234,53 +216,27 @@ const projects = [
   },
   {
     id: 'project-3',
-    name: 'CherryPickers',
+    name: 'Medicina Reumatológica',
     description: {
-      en: "A real estate company website aimed at attracting clients. Its primary goal is to receive a form with a brief description of properties.",
-      es: "Sitio web para una empresa inmobiliaria orientada a atraer clientes. Su objetivo principal es recibir un formulario con una breve descripción de propiedades."
+      en: "Multilingual site for a medical center specialized in rheumatology and clinical research.",
+      es: "Sitio multilingüe para un centro médico especializado en reumatología e investigación clínica."
     },
     tags: [
       {
-        name: 'react',
+        name: 'wordpress',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'divi',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'multi-idioma',
         color: 'pink-text-gradient',
       },
     ],
-    image: cherrypickers,
-    repo: 'https://github.com/gaetanof/cherryPickers',
-    demo: 'https://www.cherrypickershome.com/',
-  },
-  {
-    id: 'project-5',
-    name: 'Gericht Resto',
-    description: {
-      en: "Website mockup for a restaurant as a practice project.",
-      es: "Maqueta de sitio web para un restaurante como proyecto de práctica."
-    },
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: gericht,
-    repo: 'https://github.com/gaetanof/gericht-resto',
-    demo: 'https://www.gerichtrestaurant.site/',
+    image: medicina,
+    demo: 'https://medicinareumatologica.com/',
   },
 ];
 
