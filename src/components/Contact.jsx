@@ -7,9 +7,9 @@ import { send, sendHover } from '../assets';
 import { LanguageContext } from '../context/LanguageContext';
 import { strings } from '../constants/strings';
 
-// Web3Forms Access Key (es pública y segura de exponer en el frontend).
+// Web3Forms Access Key. Se carga desde variables de entorno (.env local y Vercel).
 // Conseguí la tuya en https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = 'd85579ee-1753-4f58-94c1-0adcc97e05dd';
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 const Contact = () => {
   const formRef = useRef();
