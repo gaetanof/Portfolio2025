@@ -60,7 +60,7 @@ const Hero = () => {
                 {strings.hero.greeting.name[language]}
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
+            <p className={`${styles.heroSubText} mt-2 text-eerieBlack max-w-[68vw] xs:max-w-[360px] sm:max-w-[440px] lg:max-w-[560px]`}>
               {strings.hero.description[language]}
             </p>
           </div>
@@ -111,12 +111,10 @@ const Hero = () => {
         @media (max-width: 375px) {
           .face-img {
             height: 40vh !important;
-            margin-left: 
           }
           /* Subir el texto */
           .hero-text-container {
             top: 100px !important;
-  
           }
         }
       `}</style>

@@ -8,8 +8,8 @@ export const strings = {
   hero: {
     greeting: {
       preName: {
-        en: "Hi, I'm",
-        es: "Soy"
+        en: "Hey, I'm",
+        es: "Hola, soy"
       },
       name: {
         en: "Francisco",
@@ -39,8 +39,8 @@ export const strings = {
       es: "General."
     },
     description: {
-      en: "Welcome to my portfolio! This is a space where I showcase my skills, projects, and experiences. I’m passionate about building innovative digital solutions that solve real-world problems. Feel free to explore my work and connect with me if you’re interested in collaborating.",
-      es: "Bienvenido a mi portfolio! Este es un espacio donde muestro mis habilidades, proyectos y experiencias. Me apasiona construir soluciones digitales innovadoras que resuelvan problemas reales. No dudes en explorar mi trabajo y en contactarme si querés que trabajemos juntos."
+      en: "Welcome to my portfolio! This is a space where I showcase my skills, projects, and experiences.",
+      es: "Bienvenido a mi portfolio! Este es un espacio donde muestro mis habilidades, proyectos y experiencias."
     }
   },
   tech: {
@@ -77,12 +77,12 @@ export const strings = {
       es: "Experiencia."
     },
     resumeBtn: {
-      en: "MY RESUME",
-      es: "MI CURRÍCULUM"
+      en: "RESUME",
+      es: "CURRÍCULUM"
     },
     resumeLink: {
-      en: 'https://drive.google.com/uc?export=download&id=1PCg7S_s7BXDM5FT-wr5NjgODzfReLyKI',
-      es: 'https://drive.google.com/uc?export=download&id=1HlKq6hV4Gp6DOLIR6TTiNYwWXYG70AxU'
+      en: '/cv/francisco-gaetano-en.pdf',
+      es: '/cv/francisco-gaetano-es.pdf'
     }
   },
   contact: {
