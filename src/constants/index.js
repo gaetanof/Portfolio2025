@@ -19,6 +19,7 @@ import {
   articgin,
   itsanet,
   medicina,
+  m2carpentry,
   dtt,
   sup,
   gaetano
@@ -237,6 +238,30 @@ const projects = [
     ],
     image: medicina,
     demo: 'https://medicinareumatologica.com/',
+  },
+  {
+    id: 'project-4',
+    name: 'M2 Carpentry',
+    description: {
+      en: "Site for a high-end residential and commercial carpentry company based in Sydney.",
+      es: "Sitio para una empresa de carpintería residencial y comercial de alta gama en Sydney."
+    },
+    tags: [
+      {
+        name: 'wordpress',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'design',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: m2carpentry,
+    demo: 'https://m2carpentry.com.au/',
   },
 ];
 

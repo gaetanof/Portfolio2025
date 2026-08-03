@@ -56,6 +56,7 @@ import gaetano from './company/gaetano.png';
 import articgin from './projects/articgin.png';
 import itsanet from './projects/itsanet.png';
 import medicina from './projects/medicinareumatologica.jpg';
+import m2carpentry from './projects/m2carpentry.jpg';
 
 export {
   bwmap,
@@ -102,6 +103,7 @@ export {
   articgin,
   itsanet,
   medicina,
+  m2carpentry,
   dtt,
   sup,
   gaetano
