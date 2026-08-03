@@ -107,12 +107,18 @@ const Hero = () => {
       </section>
 
       <style>{`
-        /* Achicar la foto en pantallas muy pequeñas (<= 375px) */
+        /* Celulares (< 640px): mantener la foto contenida abajo a la derecha,
+           sin que suba a tapar el texto */
+        @media (max-width: 639px) {
+          .face-img {
+            height: 42vh !important;
+          }
+        }
+        /* Pantallas muy pequeñas (<= 375px): achicar un poco más y subir el texto */
         @media (max-width: 375px) {
           .face-img {
-            height: 40vh !important;
+            height: 38vh !important;
           }
-          /* Subir el texto */
           .hero-text-container {
             top: 100px !important;
           }
