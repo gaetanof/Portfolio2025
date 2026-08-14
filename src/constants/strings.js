@@ -81,8 +81,8 @@ export const strings = {
       es: "CURRÍCULUM"
     },
     resumeLink: {
-      en: '/cv/francisco-gaetano-implementation-en.pdf',
-      es: '/cv/francisco-gaetano-implementation-es.pdf'
+      en: '/cv/francisco-gaetano-cv-en.pdf',
+      es: '/cv/francisco-gaetano-cv-es.pdf'
     }
   },
   contact: {
