@@ -57,6 +57,7 @@ import articgin from './projects/articgin.png';
 import itsanet from './projects/itsanet.png';
 import medicina from './projects/medicinareumatologica.jpg';
 import m2carpentry from './projects/m2carpentry.jpg';
+import datagate from './projects/datagate.png';
 
 export {
   bwmap,
@@ -104,6 +105,7 @@ export {
   itsanet,
   medicina,
   m2carpentry,
+  datagate,
   dtt,
   sup,
   gaetano

@@ -20,6 +20,7 @@ import {
   itsanet,
   medicina,
   m2carpentry,
+  datagate,
   dtt,
   sup,
   gaetano
@@ -262,6 +263,31 @@ const projects = [
     ],
     image: m2carpentry,
     demo: 'https://m2carpentry.com.au/',
+  },
+  {
+    id: 'project-5',
+    name: 'DataGate',
+    description: {
+      en: "A data-interface validation service written in Go. Upload a CSV, choose data-quality rules (required, unique, email, numeric), and it returns a report plus clean and to-fix files. Personal project, still in development (not a production service). It runs on a free tier, so the first load can take a few seconds to wake up.",
+      es: "Servicio de validación de interfaces de datos escrito en Go. Subís un CSV, elegís reglas de calidad (requerido, único, email, numérico) y devuelve un reporte más los archivos limpio y para corregir. Proyecto personal, todavía en desarrollo (no es un servicio productivo). Corre en un plan gratuito, así que la primera carga puede tardar unos segundos en despertar."
+    },
+    tags: [
+      {
+        name: 'golang',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'docker',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'rest-api',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: datagate,
+    repo: 'https://github.com/gaetanof/datagate',
+    demo: 'https://datagate-jixq.onrender.com/',
   },
 ];
 
